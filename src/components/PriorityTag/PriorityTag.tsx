@@ -2,7 +2,7 @@ import priority_tag_styles from "./PriorityTag.module.css"
 
 import { useEffect, useState } from "react"
 
-const PriorityTag = (props: {className: any, priority_value: number}) => {
+const PriorityTag = (props: {className?: any, priority_value: number}) => {
 
     const [priority_label, set_priority_label] = useState<string>("LOW")
     const [priority_color, set_priority_color] = useState<string>(priority_tag_styles.low_color)

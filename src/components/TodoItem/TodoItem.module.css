@@ -31,23 +31,10 @@
 .footer {
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
+    justify-content: space-between;
 }
 
-.settings_button {
-    border: none;
-    background: transparent;
-    appearance: none;
-}
-.settings_button {
-    color: lightgray;
-    transition: color 0.2s ease-in;
-    cursor: pointer;
-}
-.settings_button:hover {
-    color: black;
-}
-.settings_button, .id_label, .priority_tag {
+.action_button, .id_label, .priority_tag {
     font-size: 0.8rem;
 }
 

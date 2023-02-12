@@ -4,7 +4,6 @@ import Root from './views/Root/Root'
 import TodosRoot from './views/TodosRoot/TodosRoot'
 import AllTodosView from './views/AllTodosView/AllTodosView'
 import CreateTodoView from './views/CreateTodoView/CreateTodoView'
-import SingleTodoView from './views/SingleTodoView/SingleTodoView'
 import FinishedTodosRoot from './views/FinishedTodosRoot/FinishedTodosRoot'
 import AllFinishedTodosView from './views/AllFinishedView/AllFinishedTodosView'
 import SingleFinishedTodoView from './views/SingleFinishedTodoView/SingleFinishedTodoView'
@@ -27,10 +26,6 @@ function App() {
             {
               path: "create",
               element: <CreateTodoView />
-            },
-            {
-              path: ":todo_id",
-              element: <SingleTodoView />
             }
           ]
         },

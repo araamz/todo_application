@@ -1,12 +1,13 @@
-import { NavLink, Outlet } from "react-router-dom";
+import finished_todos_root_styles from "./FinishedTodosRoot.module.css"
+
+import { Outlet } from "react-router-dom";
+
 
 const FinishedTodosRoot = () => {
 
     return (
-        <div>
-            <div>
-                <Outlet />
-            </div>
+        <div className={finished_todos_root_styles.container}>
+            <Outlet />
         </div>
     )
 

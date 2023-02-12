@@ -4,7 +4,7 @@ import PriorityTag from "../PriorityTag/PriorityTag";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-const TodoItem = (props: {children: any, priority_value: number, id: string, details_disable: boolean}) => {
+const TodoItem = (props: {children: any, priority_value: number, id: string, finished: boolean}) => {
 
     const [id_label, set_id_label] = useState<string>(props.id)
     const navigate = useNavigate()
@@ -14,8 +14,11 @@ const TodoItem = (props: {children: any, priority_value: number, id: string, det
         set_id_label(shorten_id)
     }, [])
 
-    const handle_settings_click = () => {
-        navigate(`/todos/${props.id}`)
+    const handle_done_click = () => {
+    }
+
+    const handle_details_click = () => {
+        navigate(`/finished/${props.id}`)
     }
 
     return (
@@ -32,10 +35,13 @@ const TodoItem = (props: {children: any, priority_value: number, id: string, det
                 </p>
             </div>
             <div className={todo_item_styles.footer}>
-                { !props.details_disable ?
-                <button className={todo_item_styles.settings_button} onClick={handle_settings_click}>
+            {props.finished ? <button className={todo_item_styles.action_button}> Unfinish </button> : undefined}
+                { props.finished ?
+                <button className={todo_item_styles.action_button} onClick={handle_details_click}>
                     Details
-                </button> : undefined }
+                </button> : <button className={todo_item_styles.action_button} onClick={handle_done_click}>
+                    Done
+                </button> }
             </div>
         </div>
     )

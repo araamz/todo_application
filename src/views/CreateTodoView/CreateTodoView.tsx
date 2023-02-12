@@ -1,6 +1,7 @@
 import create_todo_view from "./CreateTodoView.module.css"
 
 import { useState } from "react"
+import ItemContainer from "../../components/ItemContainer/ItemContainer"
 
 const CreateTodoView = () => {
 
@@ -20,33 +21,27 @@ const CreateTodoView = () => {
 
     return (
         <div className={create_todo_view.container}>
-            <div className={create_todo_view.todo_form_container}>
-                <p className={create_todo_view.form_label}>
-                    Write your todo...
-                </p>
+            <ItemContainer label="Write your todo...">
                 <textarea onChange={handle_todo_change} className={create_todo_view.todo_textarea}/>
-            </div>
-            <div className={create_todo_view.priority_form_container}>
-                <p className={create_todo_view.form_label}>
-                    What's your priority?
-                </p>
+            </ItemContainer>
+            <ItemContainer label="What's your priority?">
                 <form onChange={handle_priority_change} className={create_todo_view.priority_form}>
-                    <div className={create_todo_view.priority_form_item}>
+                    <div className={`${create_todo_view.priority_form_item} ${create_todo_view.low_color}`}>
                         <input type="radio" defaultChecked value={0} name="priority" />
-                        <label>LOW</label>
+                        <label className={create_todo_view.low_color}>LOW</label>
                     </div>
-                    <div className={create_todo_view.priority_form_item}>
+                    <div className={`${create_todo_view.priority_form_item} ${create_todo_view.medium_color}`}>
                         <input type="radio" value={1} name="priority" />
-                        <label>MEDIUM</label>
+                        <label className={create_todo_view.medium_color}>MEDIUM</label>
                     </div>
-                    <div className={create_todo_view.priority_form_item}>
+                    <div className={`${create_todo_view.priority_form_item} ${create_todo_view.high_color}`}>
                         <input type="radio" value={2} name="priority" />
                         <label>HIGH</label>
                     </div>
                 </form>
-            </div>
+            </ItemContainer>
             <div>
-                <button>
+                <button className={create_todo_view.create_button}>
                     Create Todo
                 </button>
             </div>
