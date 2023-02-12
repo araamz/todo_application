@@ -1,0 +1,53 @@
+.container {
+    border: 2px solid black;
+    border-radius: 4px;
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    row-gap: 10px;
+
+    height: 200px;
+    padding: 15px;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+}
+.uuid_bold {
+    font-weight: 600;
+}
+
+.body {
+    overflow-y: auto;
+}
+.body_text {
+    font-size: 1.2rem;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+
+.settings_button {
+    border: none;
+    background: transparent;
+    appearance: none;
+}
+.settings_button {
+    color: lightgray;
+    transition: color 0.2s ease-in;
+    cursor: pointer;
+}
+.settings_button:hover {
+    color: black;
+}
+.settings_button, .id_label, .priority_tag {
+    font-size: 0.8rem;
+}
+

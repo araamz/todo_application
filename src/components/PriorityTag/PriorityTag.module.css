@@ -1,0 +1,16 @@
+.container {
+    padding: 4px 6px;
+    border-radius: 4px;
+    font-weight: 500;
+    color: white;
+}
+
+.low_color {
+    background: lightgreen;
+}
+.medium_color {
+    background: orange;
+}
+.high_color {
+    background: lightcoral;
+}
