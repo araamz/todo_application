@@ -6,21 +6,24 @@ import PriorityTag from "../../components/PriorityTag/PriorityTag";
 const SingleFinishedTodoView = () => {
     return (
         <div className={single_finished_todo_view_styles.container}>
-            <div>
-                <ItemContainer label="Date Created">
+            <div className={single_finished_todo_view_styles.information_items}>
+                <ItemContainer className={`${single_finished_todo_view_styles.item_container}`} label="Todo Information">
+                    <p>
+                        This is a test.
+                    </p>
+                </ItemContainer>
+                <ItemContainer className={`${single_finished_todo_view_styles.item_container}`} label="Date Created">
                     <p>
                         Tests
                     </p>
                 </ItemContainer>
-                <ItemContainer label="Finished Date">
+                <ItemContainer className={single_finished_todo_view_styles.item_container} label="Finished Date">
                     <p>
 
                     </p>           
                 </ItemContainer>
-                <ItemContainer label="Todo Priority">
+                <ItemContainer className={single_finished_todo_view_styles.item_container} label="Todo Priority">
                     <PriorityTag priority_value={0} />
-                </ItemContainer>
-                <ItemContainer label="Todo Information">
                 </ItemContainer>
             </div>
             <div>

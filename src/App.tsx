@@ -16,6 +16,10 @@ function App() {
       element: <Root />,
       children: [
         {
+          index: true,
+          element: <p>This is a simple todo application to demonstate certain features of React and React Router.</p>
+        },
+        {
           path: "todos",
           element: <TodosRoot />,
           children: [

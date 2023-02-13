@@ -12,7 +12,7 @@ const TodosRoot = () => {
                 }>
                     TASKS
                 </NavLink>
-                <NavLink to={"/todos/create"} end className={({isActive}) => 
+                <NavLink to={"create"} end className={({isActive}) => 
                     isActive ? todos_root_styles.active_style : undefined
                 }>
                     NEW
